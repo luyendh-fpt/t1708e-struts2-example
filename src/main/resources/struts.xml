@@ -18,7 +18,13 @@
             <result name="error">/error.jsp</result>
         </action>
         <action name="hello" class="hello.world.controller.HelloAction" method="hello">
-
+            <result name="hello-form">/hello.jsp</result>
+            <result name="input">/hello.jsp</result>
+        </action>
+        <action name="say-hello" class="hello.world.controller.HelloAction" method="sayHello">
+            <result name="input">/hello.jsp</result>
+            <result name="say-hello">/say-hello.jsp</result>
+            <result name="hello-form">/hello.jsp</result>
         </action>
     </package>
 </struts>

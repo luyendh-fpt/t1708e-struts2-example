@@ -57,4 +57,62 @@ public class User {
     public void setStatus(int status) {
         this.status = status;
     }
+
+
+    public static final class Builder {
+        private String username;
+        private String password;
+        private String email;
+        private long createdAtMLS;
+        private long updatedAtMLS;
+        private int status;
+
+        private Builder() {
+        }
+
+        public static Builder anUser() {
+            return new Builder();
+        }
+
+        public Builder withUsername(String username) {
+            this.username = username;
+            return this;
+        }
+
+        public Builder withPassword(String password) {
+            this.password = password;
+            return this;
+        }
+
+        public Builder withEmail(String email) {
+            this.email = email;
+            return this;
+        }
+
+        public Builder withCreatedAtMLS(long createdAtMLS) {
+            this.createdAtMLS = createdAtMLS;
+            return this;
+        }
+
+        public Builder withUpdatedAtMLS(long updatedAtMLS) {
+            this.updatedAtMLS = updatedAtMLS;
+            return this;
+        }
+
+        public Builder withStatus(int status) {
+            this.status = status;
+            return this;
+        }
+
+        public User build() {
+            User user = new User();
+            user.setUsername(username);
+            user.setPassword(password);
+            user.setEmail(email);
+            user.setCreatedAtMLS(createdAtMLS);
+            user.setUpdatedAtMLS(updatedAtMLS);
+            user.setStatus(status);
+            return user;
+        }
+    }
 }
