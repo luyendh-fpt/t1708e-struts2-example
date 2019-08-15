@@ -1,20 +1,13 @@
 package hello.world.entity;
 
-import com.googlecode.objectify.annotation.Entity;
-import com.googlecode.objectify.annotation.Id;
-import com.googlecode.objectify.annotation.Index;
 
-@Entity
 public class User {
-    @Id
+
     private String username;
     private String password;
-    @Index
     private String email;
-    @Index
     private long createdAtMLS;
     private long updatedAtMLS;
-    @Index
     private int status;
 
     public String getUsername() {

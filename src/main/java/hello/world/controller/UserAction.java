@@ -3,8 +3,6 @@ package hello.world.controller;
 import com.opensymphony.xwork2.ActionSupport;
 import hello.world.entity.User;
 
-import static com.googlecode.objectify.ObjectifyService.ofy;
-
 public class UserAction extends ActionSupport {
 
     private User currentUser; // bean java
@@ -18,10 +16,8 @@ public class UserAction extends ActionSupport {
         if (hasErrors()) {
             return INPUT;
         }
-        ofy().save().entity(currentUser).now();
         return SUCCESS;
     }
-
 
 
     @Override
